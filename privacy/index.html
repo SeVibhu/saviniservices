@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TradeWords Translator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f4ef; --ink: #1a1710; --muted: #6b6456; --accent: #c8510a;
+      --accent-light: #f0e6dc; --border: #ddd7cc; --white: #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: 'Source Sans 3', sans-serif; font-weight: 300; line-height: 1.8; min-height: 100vh; }
+    header { background: var(--ink); color: var(--white); padding: 3rem 2rem 2.5rem; position: relative; overflow: hidden; }
+    header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 260px; height: 260px; border-radius: 50%; background: var(--accent); opacity: 0.12; }
+    header::after { content: ''; position: absolute; bottom: -40px; left: 40px; width: 140px; height: 140px; border-radius: 50%; background: var(--accent); opacity: 0.08; }
+    .header-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+    .app-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); background: rgba(200,81,10,0.15); padding: 0.3rem 0.8rem; border-radius: 2rem; margin-bottom: 1.2rem; }
+    .flag-row { display: flex; gap: 0.6rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; }
+    .flag-row img { width: 36px; height: 24px; border-radius: 3px; object-fit: cover; box-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+    header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 0.5rem; }
+    header h1 span { color: var(--accent); }
+    .subtitle { color: #b0a89e; font-size: 0.95rem; margin-top: 0.8rem; }
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+    .meta-bar { display: flex; gap: 2rem; flex-wrap: wrap; padding: 1.2rem 1.5rem; background: var(--white); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 3rem; font-size: 0.85rem; color: var(--muted); }
+    .meta-bar strong { color: var(--ink); font-weight: 600; }
+    section { margin-bottom: 2.8rem; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: var(--ink); margin-bottom: 0.9rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent-light); display: flex; align-items: center; gap: 0.6rem; }
+    h2 .num { display: inline-flex; align-items: center; justify-content: center; width: 1.6rem; height: 1.6rem; background: var(--accent); color: #fff; font-family: 'Source Sans 3', sans-serif; font-size: 0.75rem; font-weight: 600; border-radius: 50%; flex-shrink: 0; }
+    p { margin-bottom: 0.9rem; color: #3a342c; font-size: 1rem; }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 0.5rem 0 0.9rem 1.4rem; color: #3a342c; }
+    ul li { margin-bottom: 0.35rem; }
+    .highlight-box { background: var(--accent-light); border-left: 3px solid var(--accent); padding: 1rem 1.2rem; border-radius: 0 6px 6px 0; margin: 1rem 0; font-size: 0.95rem; color: #3a342c; }
+    .offline-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: #e8f5e9; border: 1px solid #a5d6a7; color: #2e7d32; font-size: 0.85rem; font-weight: 600; padding: 0.4rem 1rem; border-radius: 2rem; margin-bottom: 1rem; }
+    .lang-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 0.7rem; margin: 1rem 0; }
+    .lang-pill { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 1rem; font-size: 0.9rem; display: flex; align-items: center; gap: 0.6rem; color: #3a342c; }
+    .lang-pill img { width: 28px; height: 19px; border-radius: 2px; object-fit: cover; box-shadow: 0 1px 3px rgba(0,0,0,0.2); flex-shrink: 0; }
+    .platform-row { display: flex; gap: 0.7rem; flex-wrap: wrap; margin: 0.8rem 0; }
+    .platform-pill { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.88rem; color: #3a342c; }
+    .contact-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin-top: 1rem; }
+    .contact-card p { margin-bottom: 0.5rem; }
+    .contact-card a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .contact-card a:hover { text-decoration: underline; }
+    footer { background: var(--ink); color: #8a8070; text-align: center; padding: 2rem; font-size: 0.82rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) { main { padding: 2rem 1.2rem 4rem; } .meta-bar { gap: 1rem; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="app-label">📋 Privacy Policy</div>
+    <div class="flag-row">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxMyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjEzIiBmaWxsPSIjMDA2QUE3Ii8+PHJlY3QgeD0iNSIgd2lkdGg9IjMiIGhlaWdodD0iMTMiIGZpbGw9IiNGRUNDMDIiLz48cmVjdCB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iMyIgZmlsbD0iI0ZFQ0MwMiIvPjwvc3ZnPg==" alt="Sweden" title="Swedish" />
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzMCI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjMDEyMTY5Ii8+PHBhdGggZD0iTTAsMCBMNjAsMzAgTTYwLDAgTDAsMzAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNiIvPjxwYXRoIGQ9Ik0wLDAgTDYwLDMwIE02MCwwIEwwLDMwIiBzdHJva2U9IiNDODEwMkUiIHN0cm9rZS13aWR0aD0iNCIvPjxwYXRoIGQ9Ik0zMCwwIFYzMCBNMCwxNSBINjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMTAiLz48cGF0aCBkPSJNMzAsMCBWMzAgTTAsMTUgSDYwIiBzdHJva2U9IiNDODEwMkUiIHN0cm9rZS13aWR0aD0iNiIvPjwvc3ZnPg==" alt="United Kingdom" title="English" />
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxMyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjEzIiBmaWxsPSIjMDA2NjAwIi8+PHJlY3QgeT0iMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjMuNSIgZmlsbD0iYmxhY2siLz48cmVjdCB5PSIzLjUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI2IiBmaWxsPSIjQkIwMDAwIi8+PHJlY3QgeT0iOS41IiB3aWR0aD0iMjAiIGhlaWdodD0iMy41IiBmaWxsPSIjMDA2NjAwIi8+PHJlY3QgeT0iNS43NSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuNSIgZmlsbD0iYmxhY2siLz48L3N2Zz4=" alt="Kenya" title="Swahili / Kikuyu" />
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAxMyI+PHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjEzIiBmaWxsPSJibGFjayIvPjxyZWN0IHk9IjIuMTYiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyLjE2IiBmaWxsPSIjRkNEQzA0Ii8+PHJlY3QgeT0iNC4zMyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjIuMTYiIGZpbGw9IiNERTM5MDgiLz48cmVjdCB5PSI2LjUiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyLjE2IiBmaWxsPSJibGFjayIvPjxyZWN0IHk9IjguNjYiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyLjE2IiBmaWxsPSIjRkNEQzA0Ii8+PHJlY3QgeT0iMTAuODMiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyLjE2IiBmaWxsPSIjREUzOTA4Ii8+PC9zdmc+" alt="Uganda" title="Luganda" />
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxMyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjEzIiBmaWxsPSIjMDA2QzM1Ii8+PHJlY3QgeD0iMSIgeT0iNS41IiB3aWR0aD0iMTgiIGhlaWdodD0iMSIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSIxIiB5PSI0IiB3aWR0aD0iMiIgaGVpZ2h0PSI0IiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHg9IjE3IiB5PSI0IiB3aWR0aD0iMiIgaGVpZ2h0PSI0IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="Saudi Arabia" title="Arabic" />
+    </div>
+    <h1>TradeWords <span>Translator</span></h1>
+    <p class="subtitle">com.translang &nbsp;·&nbsp; Savini Services &nbsp;·&nbsp; saviniservices.com</p>
+  </div>
+</header>
+
+<main>
+
+  <div class="meta-bar">
+    <div><strong>Effective date:</strong> 14 May 2026</div>
+    <div><strong>Last updated:</strong> 14 May 2026</div>
+    <div><strong>App version:</strong> v2.0 Multilanguage</div>
+  </div>
+
+  <section>
+    <div class="offline-badge">✅ Offline &amp; Read-Only App</div>
+    <p>This Privacy Policy describes how <strong>Savini Services</strong> ("we", "us", or "our") handles information when you use the <strong>TradeWords Translator</strong> mobile application (package: <em>com.translang</em>) on Android and iOS devices.</p>
+    <div class="highlight-box">
+      <strong>Short version:</strong> TradeWords Translator is a fully offline, read-only reference app. It does not connect to the internet during use, does not collect any data, and does not transmit anything from your device. Your privacy is completely protected by design.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">1</span> Information We Collect</h2>
+    <p>TradeWords Translator collects <strong>no personal data whatsoever</strong>. The app is read-only and fully offline. Specifically:</p>
+    <ul>
+      <li>We do <strong>not</strong> collect your name, email, or any contact information.</li>
+      <li>We do <strong>not</strong> collect or access your location.</li>
+      <li>We do <strong>not</strong> record or transmit your searches or translation history.</li>
+      <li>We do <strong>not</strong> use advertising, analytics, or tracking of any kind.</li>
+      <li>We do <strong>not</strong> require an account or login to use the app.</li>
+      <li>We do <strong>not</strong> access your contacts, camera, microphone, or any other device feature.</li>
+    </ul>
+    <p>The app stores your language and country preference <strong>locally on your device only</strong>. This data is never sent anywhere.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">2</span> Offline &amp; Read-Only Design</h2>
+    <p>TradeWords Translator is built to work entirely without an internet connection. All vocabulary data is bundled within the app itself at installation. You can use the app on a plane, in a remote field, or anywhere without connectivity.</p>
+    <p>The app is <strong>read-only</strong> — users browse and search the translation database but cannot create, edit, or submit any content.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">3</span> Supported Languages</h2>
+    <p>TradeWords Translator provides trade and field-specific vocabulary across six languages:</p>
+    <div class="lang-grid">
+      <div class="lang-pill"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzMCI+PHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjMDEyMTY5Ii8+PHBhdGggZD0iTTAsMCBMNjAsMzAgTTYwLDAgTDAsMzAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNiIvPjxwYXRoIGQ9Ik0wLDAgTDYwLDMwIE02MCwwIEwwLDMwIiBzdHJva2U9IiNDODEwMkUiIHN0cm9rZS13aWR0aD0iNCIvPjxwYXRoIGQ9Ik0zMCwwIFYzMCBNMCwxNSBINjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMTAiLz48cGF0aCBkPSJNMzAsMCBWMzAgTTAsMTUgSDYwIiBzdHJva2U9IiNDODEwMkUiIHN0cm9rZS13aWR0aD0iNiIvPjwvc3ZnPg==" alt="English" /> English</div>
+      <div class="lang-pill"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxMyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjEzIiBmaWxsPSIjMDA2QUE3Ii8+PHJlY3QgeD0iNSIgd2lkdGg9IjMiIGhlaWdodD0iMTMiIGZpbGw9IiNGRUNDMDIiLz48cmVjdCB5PSI1IiB3aWR0aD0iMjAiIGhlaWdodD0iMyIgZmlsbD0iI0ZFQ0MwMiIvPjwvc3ZnPg==" alt="Swedish" /> Swedish</div>
+      <div class="lang-pill"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxMyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjEzIiBmaWxsPSIjMDA2NjAwIi8+PHJlY3QgeT0iMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjMuNSIgZmlsbD0iYmxhY2siLz48cmVjdCB5PSIzLjUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI2IiBmaWxsPSIjQkIwMDAwIi8+PHJlY3QgeT0iOS41IiB3aWR0aD0iMjAiIGhlaWdodD0iMy41IiBmaWxsPSIjMDA2NjAwIi8+PHJlY3QgeT0iNS43NSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuNSIgZmlsbD0iYmxhY2siLz48L3N2Zz4=" alt="Swahili" /> Swahili</div>
+      <div class="lang-pill"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAxMyI+PHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjEzIiBmaWxsPSJibGFjayIvPjxyZWN0IHk9IjIuMTYiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyLjE2IiBmaWxsPSIjRkNEQzA0Ii8+PHJlY3QgeT0iNC4zMyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjIuMTYiIGZpbGw9IiNERTM5MDgiLz48cmVjdCB5PSI2LjUiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyLjE2IiBmaWxsPSJibGFjayIvPjxyZWN0IHk9IjguNjYiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyLjE2IiBmaWxsPSIjRkNEQzA0Ii8+PHJlY3QgeT0iMTAuODMiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyLjE2IiBmaWxsPSIjREUzOTA4Ii8+PC9zdmc+" alt="Luganda" /> Luganda</div>
+      <div class="lang-pill"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxMyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjEzIiBmaWxsPSIjMDA2QzM1Ii8+PHJlY3QgeD0iMSIgeT0iNS41IiB3aWR0aD0iMTgiIGhlaWdodD0iMSIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSIxIiB5PSI0IiB3aWR0aD0iMiIgaGVpZ2h0PSI0IiBmaWxsPSJ3aGl0ZSIvPjxyZWN0IHg9IjE3IiB5PSI0IiB3aWR0aD0iMiIgaGVpZ2h0PSI0IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==" alt="Arabic" /> Arabic</div>
+      <div class="lang-pill"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxMyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjEzIiBmaWxsPSIjMDA2NjAwIi8+PHJlY3QgeT0iMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjMuNSIgZmlsbD0iYmxhY2siLz48cmVjdCB5PSIzLjUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI2IiBmaWxsPSIjQkIwMDAwIi8+PHJlY3QgeT0iOS41IiB3aWR0aD0iMjAiIGhlaWdodD0iMy41IiBmaWxsPSIjMDA2NjAwIi8+PHJlY3QgeT0iNS43NSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjEuNSIgZmlsbD0iYmxhY2siLz48L3N2Zz4=" alt="Kikuyu" /> Kikuyu</div>
+    </div>
+    <p>No language input or search data is transmitted to or stored on our servers.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">4</span> Third-Party Services</h2>
+    <p>TradeWords Translator does not integrate third-party advertising, analytics, or social login services.</p>
+    <p>The app is currently distributed through <strong>Aptoide</strong>. Each distribution platform has its own privacy policy governing data collected during download and installation.</p>
+    <div class="platform-row">
+      <div class="platform-pill">📦 Aptoide</div>
+      <div class="platform-pill">🤖 Android</div>
+      <div class="platform-pill">🍎 iOS</div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">5</span> Children's Privacy</h2>
+    <p>TradeWords Translator is rated <strong>Everyone</strong> and is suitable for all ages, including school and university students. Because the app collects absolutely no data from any user, it is fully safe for children and complies with child privacy regulations worldwide.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">6</span> GDPR — Users in the EU / EEA</h2>
+    <p>As a Swedish-based service, we comply with the General Data Protection Regulation (GDPR). Because we do not collect or process any personal data, no data subject rights are triggered. There is no data to access, correct, or delete. If you have any questions, please contact us below.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">7</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">8</span> Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please reach out:</p>
+    <div class="contact-card">
+      <p><strong>Savini Services</strong></p>
+      <p>📧 <a href="mailto:support@saviniservices.com">support@saviniservices.com</a></p>
+      <p>🌐 <a href="https://saviniservices.com" target="_blank">saviniservices.com</a></p>
+      <p>🎓 Developed as part of a programme at <a href="https://my.se" target="_blank">Malmö Yrkeshögskola (my.se)</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Savini Services · <a href="https://saviniservices.com">saviniservices.com</a> · TradeWords Translator v2.0</p>
+</footer>
+
+</body>
+</html>
